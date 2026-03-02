@@ -12,13 +12,14 @@ export const platforms = [
       { key: 'receipt', label: '領収書', description: 'Receipt' },
     ],
   },
-  // Future platforms can be added here:
-  // {
-  //   id: 'freee',
-  //   name: 'freee',
-  //   nameJa: 'freee会計',
-  //   description: 'freee請求書テンプレート',
-  //   color: '#6366f1',
-  //   docs: [...],
-  // },
+  {
+    id: 'hajimari',
+    name: 'Hajimari WORKS',
+    nameJa: 'はじまりワークス',
+    description: '請求書・作業報告書・経費ダウンロード',
+    color: '#2bbcb3',
+    docs: [
+      { key: 'download', label: 'ダウンロード', description: 'Download Portal' },
+    ],
+  },
 ]
