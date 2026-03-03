@@ -22,4 +22,12 @@ export const platforms = [
       { key: 'download', label: 'ダウンロード', description: 'Download Portal' },
     ],
   },
+  {
+    id: 'sakura',
+    name: 'Sakura Finance',
+    nameJa: 'サクラファイナンス',
+    description: 'ログイン認証付き請求書',
+    color: '#d946a8',
+    docs: [{ key: 'invoice', label: '請求書', description: 'Invoice' }],
+  },
 ]
