@@ -1,11 +1,9 @@
-import { useState } from 'react'
 import { Link, useParams, Navigate } from 'react-router-dom'
 import { credentials } from '../data/kuracloud'
 import './KuraCloudEmail.css'
 
 export default function KuraCloudEmail() {
   const { emailType } = useParams()
-  const [currentView, setCurrentView] = useState(emailType || 'invoice')
 
   if (emailType !== 'invoice' && emailType !== 'password') {
     return <Navigate to="/" replace />
@@ -21,22 +19,9 @@ export default function KuraCloudEmail() {
             </svg>
             一覧に戻る
           </Link>
-          <div className="kura-email-tabs">
-            <Link
-              to="/kuracloud/email/invoice"
-              className={`kura-email-tab ${emailType === 'invoice' ? 'active' : ''}`}
-              onClick={() => setCurrentView('invoice')}
-            >
-              1通目：請求書リンク
-            </Link>
-            <Link
-              to="/kuracloud/email/password"
-              className={`kura-email-tab ${emailType === 'password' ? 'active' : ''}`}
-              onClick={() => setCurrentView('password')}
-            >
-              2通目：パスワード通知
-            </Link>
-          </div>
+          <span className="kura-email-badge">
+            {emailType === 'invoice' ? '1通目：請求書リンク通知' : '2通目：パスワード通知'}
+          </span>
         </div>
       </header>
 
