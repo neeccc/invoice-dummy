@@ -30,4 +30,16 @@ export const platforms = [
     color: '#d946a8',
     docs: [{ key: 'invoice', label: '請求書', description: 'Invoice' }],
   },
+  {
+    id: 'kuracloud',
+    name: 'KuraCloud',
+    nameJa: 'クラクラウド',
+    description: 'パスワード別送型の請求書',
+    color: '#2563eb',
+    docs: [
+      { key: 'invoice', label: '請求書', description: 'Invoice' },
+      { key: 'email/invoice', label: 'メール①（リンク通知）', description: 'Email: Invoice Link' },
+      { key: 'email/password', label: 'メール②（パスワード通知）', description: 'Email: Password' },
+    ],
+  },
 ]
